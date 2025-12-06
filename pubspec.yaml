@@ -39,9 +39,13 @@ flutter:
     - assets/icon/
 
   fonts:
-
-    - family: BarlowCondensed
+    - family: Inter
       fonts:
-        - asset: assets/fonts/BarlowCondensed-Regular.ttf
-        - asset: assets/fonts/BarlowCondensed-Light.ttf
-        - asset: assets/fonts/BarlowCondensed-Bold.ttf
+        - asset: assets/fonts/Inter_28pt-Thin.ttf
+          weight: 200
+        - asset: assets/fonts/Inter_28pt-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Inter_28pt-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Inter_28pt-Bold.ttf
+          weight: 700

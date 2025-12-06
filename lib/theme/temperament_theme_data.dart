@@ -10,9 +10,11 @@ class TemperamentThemeData {
 
 class _TemperamentThemeData {
   ThemeData get temperamentTheme => ThemeData(
+        fontFamily: 'Inter',
         scaffoldBackgroundColor: TemperamentColors.navyBackground,
         appBarTheme: AppBarTheme(
           backgroundColor: Colors.transparent,
+          actionsPadding: const EdgeInsets.only(right: 8),
           titleTextStyle: TemperamentTextStyle.tertiary.exLarge.copyWith(
             color: TemperamentColors.darkTextColor,
           ),
