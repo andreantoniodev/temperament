@@ -12,48 +12,54 @@ class TemperamentTextStyle {
 
 class _Primary {
   TextStyle get normal => const TextStyle(
-        fontWeight: FontWeight.w200,
+        fontWeight: FontWeight.w400,
         fontSize: 14,
       );
 
   TextStyle get medium => const TextStyle(
-        fontWeight: FontWeight.w200,
+        fontWeight: FontWeight.w400,
         fontSize: 16,
       );
 
   TextStyle get large => const TextStyle(
+        fontWeight: FontWeight.w400,
         fontSize: 18,
       );
 
   TextStyle get exLarge => const TextStyle(
-        fontWeight: FontWeight.w200,
+        fontWeight: FontWeight.w400,
         fontSize: 20,
       );
 
   TextStyle get gigant => const TextStyle(
-        fontWeight: FontWeight.w200,
+        fontWeight: FontWeight.w400,
         fontSize: 22,
       );
 }
 
 class _Secondary {
   TextStyle get normal => const TextStyle(
+        fontWeight: FontWeight.w500,
         fontSize: 14,
       );
 
   TextStyle get medium => const TextStyle(
+        fontWeight: FontWeight.w500,
         fontSize: 16,
       );
 
   TextStyle get large => const TextStyle(
+        fontWeight: FontWeight.w500,
         fontSize: 18,
       );
 
   TextStyle get exLarge => const TextStyle(
+        fontWeight: FontWeight.w500,
         fontSize: 20,
       );
 
   TextStyle get gigant => const TextStyle(
+        fontWeight: FontWeight.w500,
         fontSize: 22,
       );
 }

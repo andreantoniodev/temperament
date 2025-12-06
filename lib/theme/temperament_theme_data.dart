@@ -14,6 +14,7 @@ class _TemperamentThemeData {
         scaffoldBackgroundColor: TemperamentColors.navyBackground,
         appBarTheme: AppBarTheme(
           backgroundColor: Colors.transparent,
+          surfaceTintColor: Colors.transparent,
           actionsPadding: const EdgeInsets.only(right: 8),
           titleTextStyle: TemperamentTextStyle.tertiary.exLarge.copyWith(
             color: TemperamentColors.darkTextColor,
