@@ -14,90 +14,92 @@ class ResultTemplate extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.all(16).copyWith(top: 32),
-        child: Column(
-          children: [
-            Text(
-              'Seu temperamento é',
-              textAlign: TextAlign.center,
-              style: TemperamentTextStyle.tertiary.exLarge.copyWith(
-                color: TemperamentColors.darkTextColor,
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.all(16).copyWith(top: 32),
+          child: Column(
+            children: [
+              Text(
+                'Seu temperamento é',
+                textAlign: TextAlign.center,
+                style: TemperamentTextStyle.tertiary.exLarge.copyWith(
+                  color: TemperamentColors.darkTextColor,
+                ),
               ),
-            ),
-            const SizedBox(height: 8),
-            Observer(
-              builder: (_) {
-                final temperamentDescription = controller.getTemperamentDescription();
+              const SizedBox(height: 8),
+              Observer(
+                builder: (_) {
+                  final temperamentDescription = controller.getTemperamentDescription();
 
-                return Column(
-                  children: [
-                    Container(
-                      width: double.infinity,
-                      padding: const EdgeInsets.all(16),
-                      decoration: BoxDecoration(
-                        color: TemperamentColors.primary,
-                        borderRadius: BorderRadius.circular(12),
+                  return Column(
+                    children: [
+                      Container(
+                        width: double.infinity,
+                        padding: const EdgeInsets.all(16),
+                        decoration: BoxDecoration(
+                          color: TemperamentColors.primary,
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: Text(
+                          '${controller.result}!',
+                          textAlign: TextAlign.center,
+                          style: TemperamentTextStyle.tertiary.gigant.copyWith(
+                            fontSize: 32,
+                            color: Colors.white,
+                          ),
+                        ),
                       ),
-                      child: Text(
-                        '${controller.result}!',
+                      const SizedBox(height: 8),
+                      Text(
+                        temperamentDescription,
                         textAlign: TextAlign.center,
-                        style: TemperamentTextStyle.tertiary.gigant.copyWith(
-                          fontSize: 32,
-                          color: Colors.white,
-                        ),
+                        style: TemperamentTextStyle.tertiary.large,
                       ),
-                    ),
-                    const SizedBox(height: 8),
-                    Text(
-                      temperamentDescription,
-                      textAlign: TextAlign.center,
-                      style: TemperamentTextStyle.tertiary.large,
-                    ),
-                  ],
-                );
-              },
-            ),
-            Expanded(
-              child: Observer(
-                builder: (context) {
-                  final detail = controller.detail;
-
-                  return ListView.separated(
-                    padding: const EdgeInsets.symmetric(vertical: 16),
-                    itemCount: detail.length,
-                    separatorBuilder: (context, index) => const SizedBox(height: 4),
-                    itemBuilder: (context, index) {
-                      final key = detail.keys.elementAt(index);
-                      final value = detail.values.elementAt(index);
-
-                      return Text.rich(
-                        TextSpan(
-                          children: [
-                            TextSpan(
-                              text: '$key: ',
-                              style: TemperamentTextStyle.tertiary.medium,
-                            ),
-                            TextSpan(
-                              text: value,
-                              style: TemperamentTextStyle.secondary.medium,
-                            ),
-                          ],
-                        ),
-                      );
-                    },
+                    ],
                   );
                 },
               ),
-            ),
-          ],
+              Expanded(
+                child: Observer(
+                  builder: (context) {
+                    final detail = controller.detail;
+
+                    return ListView.separated(
+                      padding: const EdgeInsets.symmetric(vertical: 16),
+                      itemCount: detail.length,
+                      separatorBuilder: (context, index) => const SizedBox(height: 4),
+                      itemBuilder: (context, index) {
+                        final key = detail.keys.elementAt(index);
+                        final value = detail.values.elementAt(index);
+
+                        return Text.rich(
+                          TextSpan(
+                            children: [
+                              TextSpan(
+                                text: '$key: ',
+                                style: TemperamentTextStyle.tertiary.medium,
+                              ),
+                              TextSpan(
+                                text: value,
+                                style: TemperamentTextStyle.secondary.medium,
+                              ),
+                            ],
+                          ),
+                        );
+                      },
+                    );
+                  },
+                ),
+              ),
+            ],
+          ),
         ),
       ),
       persistentFooterButtons: [
         TemperamentButton.primary(
-          onPressed: () {
+          onPressed: () async {
             controller.clearTemperament();
-            go.home(context);
+            await go.home(context);
           },
           child: Text(
             'Fazer novamente',
