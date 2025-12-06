@@ -19,7 +19,7 @@ class Temperaments {
     ),
     QuestionsModel(
       label: 'Quando você está numa festa que não conhece todo mundo, como você costuma se portar?',
-      optionA: 'Conversa com todo mundo, mas evita assunto bobo. No fim da festa e amigo de todos.',
+      optionA: 'Conversa com todo mundo, mas evita assunto bobo. No fim da festa é amigo de todos.',
       optionB: 'Procura ficar nos lugares mais reservados, conversa educadamente mas geralmente não puxa assunto.',
     ),
     QuestionsModel(
