@@ -10,6 +10,18 @@ class TemperamentThemeData {
 
 class _TemperamentThemeData {
   ThemeData get temperamentTheme => ThemeData(
-        scaffoldBackgroundColor: TemperamentColors.lightBlue,
+        scaffoldBackgroundColor: TemperamentColors.navyBackground,
+        appBarTheme: AppBarTheme(
+          backgroundColor: Colors.transparent,
+          titleTextStyle: TemperamentTextStyle.tertiary.exLarge.copyWith(
+            color: TemperamentColors.darkTextColor,
+          ),
+          elevation: 0,
+          centerTitle: true,
+          iconTheme: const IconThemeData(color: TemperamentColors.darkTextColor),
+        ),
+        bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+          backgroundColor: Colors.transparent,
+        ),
       );
 }

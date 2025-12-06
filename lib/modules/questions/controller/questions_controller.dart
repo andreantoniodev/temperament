@@ -50,7 +50,9 @@ abstract class _QuestionsController with Store {
   }
 
   @action
-  void resetQuiz() {
+  void resetQuiz({required bool reset}) {
+    if (reset == false) return;
+
     pageController.jumpToPage(0);
     currentRadioValue = '';
     firstPart.clear();

@@ -95,9 +95,7 @@ mixin _$QuestionsController on _QuestionsController, Store {
 
   @override
   String setCurrentValue(String value) {
-    final _$actionInfo = _$_QuestionsControllerActionController.startAction(
-      name: '_QuestionsController.setCurrentValue',
-    );
+    final _$actionInfo = _$_QuestionsControllerActionController.startAction(name: '_QuestionsController.setCurrentValue');
     try {
       return super.setCurrentValue(value);
     } finally {
@@ -106,12 +104,12 @@ mixin _$QuestionsController on _QuestionsController, Store {
   }
 
   @override
-  void resetQuiz() {
+  void resetQuiz({required bool reset}) {
     final _$actionInfo = _$_QuestionsControllerActionController.startAction(
       name: '_QuestionsController.resetQuiz',
     );
     try {
-      return super.resetQuiz();
+      return super.resetQuiz(reset: reset);
     } finally {
       _$_QuestionsControllerActionController.endAction(_$actionInfo);
     }

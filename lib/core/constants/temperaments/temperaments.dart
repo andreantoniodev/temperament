@@ -8,8 +8,7 @@ class Temperaments {
       optionB: 'Demora um tempo para assimilar.',
     ),
     QuestionsModel(
-      label:
-          'Você fez uma prova para a qual não estudou, no dia seguinte descobre que tirou uma nota muito boa, qual seria sua reação?',
+      label: 'Você fez uma prova para a qual não estudou, no dia seguinte descobre que tirou uma nota muito boa, qual seria sua reação?',
       optionA: 'Fica muito alegre comemora e conta pra todo mundo.',
       optionB: 'Fica surpreso mas sem palavras, só pensa "Graças a Deus".',
     ),
@@ -63,66 +62,10 @@ class Temperaments {
     ),
   ];
 
-  static const String sanguineo = '''
-Quente e Úmido
-Pessoas com temperamento sanguíneo são conhecidas por serem:
-
-- Extroversão: São pessoas extrovertidas e sociáveis, que gostam de estar com outras pessoas; 
-- Otimismo: São otimistas e alegres, e veem o copo meio cheio; 
-- Energia: São pessoas enérgicas e cheias de entusiasmo; 
-- Espontaneidade: São espontâneas e impulsivas, e podem ter dificuldade em manter a atenção; 
-- Adaptabilidade: São pessoas que se adaptam bem às mudanças; 
-- Comunicabilidade: São pessoas que comunicam bem e são persuasivas; 
-- Proatividade: São pessoas proativas no trabalho;
-- Facilidade de fazer amigos: São pessoas que fazem amizade facilmente; 
-- Agitação: São pessoas agitadas por natureza; 
-''';
-
-  static const String colerico = '''
-Quente e Seco
-Pessoas com temperamento colérico são conhecidas por serem:
-
-- Líderes naturais: Gostam de liderar e resolver problemas; 
-- Extrovertidas: Preferem estar com outras pessoas;
-- Assertivas: Assumirão o controle e tomam decisões com confiança;
-- Ativas: Têm energia para estar em movimento;
-- Determinadas: São focadas em alcançar seus objetivos; 
-- Competitivas: Gostam de vencer e superar desafios;
-- Impacientes: Querem resultados rápidos e podem se frustrar com atrasos; 
-- Diretos: Podem ser diretos ao ponto de parecerem agressivos;
-- Motivados por desafios: São excelentes estrategistas e realizadores natos;
-''';
-
-  static const String fleumatico = '''
-Frio e Úmido
-Pessoas com temperamento fleumático são conhecidas por serem:
-
-- Calmas: São pessoas que se mantêm relaxadas e dificilmente se zangam;
-- Introvertidas: Preferem estar sozinhas e valorizam seu espaço pessoal; 
-- Pacientes: São pacientes e gostam de esperar;
-- Racionais: Preferem pensar cuidadosamente antes de agir; 
-- Adaptáveis: São adaptáveis e conseguem se ajustar facilmente a novas situações;
-- Diplomáticas: São pessoas diplomáticas e pacificadoras;
-- Amigáveis: São pessoas amigáveis e agradáveis;
-- Sonhadoras: São pessoas sonhadoras e responsáveis; 
-- Confiáveis: São pessoas confiáveis para responsabilidades ou confidências;
-''';
-
-  static const String melancolico = '''
-Frio e Seco
-Pessoas com temperamento melancólico são conhecidas por serem:
-
-- Sensível: São pessoas sensíveis e se magoam facilmente;
-- Introvertidas: Preferem ficar sozinhas e ter seu próprio espaço; 
-- Perfeccionistas: Gostam de fazer as coisas da maneira certa;
-- Dedicadas: São dedicadas e gostam de se dedicar a algo que amam; 
-- Nostalgicas: São nostálgicas e muito detalhistas;
-- Leis: São muito leais e dedicados às pessoas;
-- Criativas: Têm muita criatividade;
-- Pessimistas: São pessimistas;
-- Rancorosas: São rancorosas e difíceis de se reconciliar; 
-- Inseguras: São inseguras e muito vulneráveis;
-''';
+  static const Map<String, String> sanguineo = {'Sanguíneo': 'Quente e Úmido'};
+  static const Map<String, String> colerico = {'Colérico': 'Quente e Seco'};
+  static const Map<String, String> fleumatico = {'Fleumático': 'Frio e Úmido'};
+  static const Map<String, String> melancolico = {'Melancólico': 'Frio e Seco'};
 
   static const String about = '''
 Descubra seu Temperamento
@@ -145,4 +88,53 @@ Com base nas suas respostas, você se encaixará em um dos seguintes perfis de t
 
 Responda às perguntas e descubra seu temperamento agora!
 ''';
+
+  static const Map<String, String> sanguineoMap = {
+    "Extroversão": "São pessoas extrovertidas e sociáveis, que gostam de estar com outras pessoas;",
+    "Otimismo": "São otimistas e alegres, e veem o copo meio cheio;",
+    "Energia": "São pessoas enérgicas e cheias de entusiasmo;",
+    "Espontaneidade": "São espontâneas e impulsivas, e podem ter dificuldade em manter a atenção;",
+    "Adaptabilidade": "São pessoas que se adaptam bem às mudanças;",
+    "Comunicabilidade": "São pessoas que comunicam bem e são persuasivas;",
+    "Proatividade": "São pessoas proativas no trabalho;",
+    "Facilidade de fazer amigos": "São pessoas que fazem amizade facilmente;",
+    "Agitação": "São pessoas agitadas por natureza;",
+  };
+
+  static const Map<String, String> colericoMap = {
+    "Líderes naturais": "Gostam de liderar e resolver problemas;",
+    "Extrovertidas": "Preferem estar com outras pessoas;",
+    "Assertivas": "Assumirão o controle e tomam decisões com confiança;",
+    "Ativas": "Têm energia para estar em movimento;",
+    "Determinadas": "São focadas em alcançar seus objetivos;",
+    "Competitivas": "Gostam de vencer e superar desafios;",
+    "Impacientes": "Querem resultados rápidos e podem se frustrar com atrasos;",
+    "Diretos": "Podem ser diretos ao ponto de parecerem agressivos;",
+    "Motivados por desafios": "São excelentes estrategistas e realizadores natos;",
+  };
+
+  static const Map<String, String> fleumaticoMap = {
+    "Calmas": "São pessoas que se mantêm relaxadas e dificilmente se zangam;",
+    "Introvertidas": "Preferem estar sozinhas e valorizam seu espaço pessoal;",
+    "Pacientes": "São pacientes e gostam de esperar;",
+    "Racionais": "Preferem pensar cuidadosamente antes de agir;",
+    "Adaptáveis": "São adaptáveis e conseguem se ajustar facilmente a novas situações;",
+    "Diplomáticas": "São pessoas diplomáticas e pacificadoras;",
+    "Amigáveis": "São pessoas amigáveis e agradáveis;",
+    "Sonhadoras": "São pessoas sonhadoras e responsáveis;",
+    "Confiáveis": "São pessoas confiáveis para responsabilidades ou confidências;",
+  };
+
+  static const Map<String, String> melancolicoMap = {
+    "Sensível": "São pessoas sensíveis e se magoam facilmente;",
+    "Introvertidas": "Preferem ficar sozinhas e ter seu próprio espaço;",
+    "Perfeccionistas": "Gostam de fazer as coisas da maneira certa;",
+    "Dedicadas": "São dedicadas e gostam de se dedicar a algo que amam;",
+    "Nostálgicas": "São nostálgicas e muito detalhistas;",
+    "Leais": "São muito leais e dedicados às pessoas;",
+    "Criativas": "Têm muita criatividade;",
+    "Pessimistas": "São pessimistas;",
+    "Rancorosas": "São rancorosas e difíceis de se reconciliar;",
+    "Inseguras": "São inseguras e muito vulneráveis;",
+  };
 }

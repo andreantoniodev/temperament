@@ -8,42 +8,52 @@ part 'result_controller.g.dart';
 class ResultController = _ResultController with _$ResultController;
 
 abstract class _ResultController with Store {
-  final String sanguineo = Temperaments.sanguineo;
-  final String colerico = Temperaments.colerico;
-  final String fleumatico = Temperaments.fleumatico;
-  final String melancolico = Temperaments.melancolico;
-
   @observable
   String result = '';
 
   @observable
-  String detail = '';
+  Map<String, String> detail = {};
 
   @action
   dynamic readTemperament() {
-    result = localStorage.read<dynamic>(KeysStorage.temperament) as String;
+    result = localStorage.read<dynamic>(KeysStorage.temperament) as String? ?? '';
     return _checkResult();
   }
 
-  String _checkResult() {
+  String getTemperamentDescription() {
     switch (result) {
       case 'Sanguíneo':
-        return detail = sanguineo;
+        return Temperaments.sanguineo.values.first;
       case 'Fleumático':
-        return detail = fleumatico;
+        return Temperaments.fleumatico.values.first;
       case 'Colérico':
-        return detail = colerico;
+        return Temperaments.colerico.values.first;
       case 'Melancólico':
-        return detail = melancolico;
+        return Temperaments.melancolico.values.first;
       default:
-        return detail = 'Inconclusivo';
+        return '';
+    }
+  }
+
+  Map<String, String> _checkResult() {
+    switch (result) {
+      case 'Sanguíneo':
+        return detail = Temperaments.sanguineoMap;
+      case 'Fleumático':
+        return detail = Temperaments.fleumaticoMap;
+      case 'Colérico':
+        return detail = Temperaments.colericoMap;
+      case 'Melancólico':
+        return detail = Temperaments.melancolicoMap;
+      default:
+        return detail = {};
     }
   }
 
   @action
   void clearTemperament() {
     result = '';
-    detail = '';
+    detail = {};
     return localStorage.remove(KeysStorage.temperament);
   }
 }

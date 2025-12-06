@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../theme/theme.dart';
-
 class TemperamentCard extends StatelessWidget {
   const TemperamentCard({
     super.key,
@@ -27,8 +25,8 @@ class TemperamentCard extends StatelessWidget {
       padding: padding,
       margin: margin,
       decoration: BoxDecoration(
-        color: color ?? TemperamentColors.offWhiteBlueTint,
-        border: Border.all(color: borderColor ?? TemperamentColors.secondaryBlue, width: 4),
+        color: color,
+        // border: Border.all(color: borderColor ?? TemperamentColors.secondaryBlue, width: 4),
         borderRadius: BorderRadius.circular(12),
         boxShadow: const [
           BoxShadow(
