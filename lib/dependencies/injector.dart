@@ -24,8 +24,8 @@ class _GetItImpl implements Injector {
   }
 
   @override
-  void replace<T extends Object>(T instance) {
-    GetIt.I.unregister(instance: instance);
+  Future<void> replace<T extends Object>(T instance) async {
+    await GetIt.I.unregister(instance: instance);
     GetIt.I.registerLazySingleton<T>(() => instance);
   }
 }

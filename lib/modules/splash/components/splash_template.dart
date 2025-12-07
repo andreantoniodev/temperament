@@ -11,10 +11,10 @@ class SplashTemplate extends StatefulWidget {
 
 class _SplashTemplateState extends State<SplashTemplate> {
   @override
-  void initState() {
-    Future.delayed(const Duration(seconds: 2)).whenComplete(() {
+  Future<void> initState() async {
+    await Future.delayed(const Duration(seconds: 2)).whenComplete(() async {
       if (mounted) {
-        go.home(context);
+        await go.home(context);
       }
     });
     super.initState();

@@ -1,5 +1,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
+// ignore_for_file: document_ignores
+
 part of 'questions_controller.dart';
 
 // **************************************************************************

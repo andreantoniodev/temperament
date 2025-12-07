@@ -15,8 +15,8 @@ class _GetStorageImpl implements LocalStorage {
   }
 
   @override
-  void remove(String key) {
-    _getStorage.remove(key);
+  Future<void> remove(String key) async {
+    await _getStorage.remove(key);
   }
 
   @override

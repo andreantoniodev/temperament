@@ -39,7 +39,7 @@ class AboutTemplate extends StatelessWidget {
                 TextSpan(
                   text: "Como funciona:\n",
                   style: TemperamentTextStyle.tertiary.large.copyWith(
-                    color: TemperamentColors.lightTextColor,
+                    color: TemperamentColors.darkTextColor,
                   ),
                 ),
                 TextSpan(
@@ -69,7 +69,7 @@ class AboutTemplate extends StatelessWidget {
                 TextSpan(
                   text: "Combinando os resultados:\n",
                   style: TemperamentTextStyle.tertiary.large.copyWith(
-                    color: TemperamentColors.lightTextColor,
+                    color: TemperamentColors.darkTextColor,
                   ),
                 ),
                 TextSpan(
@@ -89,7 +89,12 @@ class AboutTemplate extends StatelessWidget {
                 color: TemperamentColors.darkTextColor,
               ),
               children: [
-                const TextSpan(text: "1. Quente e Seco (Colérico):\n\n"),
+                TextSpan(
+                  text: "1. Quente e Seco (Colérico):\n\n",
+                  style: TemperamentTextStyle.tertiary.large.copyWith(
+                    color: TemperamentColors.darkTextColor,
+                  ),
+                ),
                 TextSpan(
                   text:
                       "Esse temperamento é caracterizado por uma energia intensa e ação rápida, típico de pessoas determinadas e com forte iniciativa. "
@@ -110,7 +115,12 @@ class AboutTemplate extends StatelessWidget {
                 color: TemperamentColors.darkTextColor,
               ),
               children: [
-                const TextSpan(text: "2. Quente e Úmido (Sanguíneo):\n\n"),
+                TextSpan(
+                  text: "2. Quente e Úmido (Sanguíneo):\n\n",
+                  style: TemperamentTextStyle.tertiary.large.copyWith(
+                    color: TemperamentColors.darkTextColor,
+                  ),
+                ),
                 TextSpan(
                   text:
                       "Esse temperamento reflete vitalidade, sociabilidade e entusiasmo. Pessoas com esse perfil costumam ser calorosas, extrovertidas "
@@ -131,7 +141,12 @@ class AboutTemplate extends StatelessWidget {
                 color: TemperamentColors.darkTextColor,
               ),
               children: [
-                const TextSpan(text: "3. Frio e Úmido (Fleumático):\n\n"),
+                TextSpan(
+                  text: "3. Frio e Úmido (Fleumático):\n\n",
+                  style: TemperamentTextStyle.tertiary.large.copyWith(
+                    color: TemperamentColors.darkTextColor,
+                  ),
+                ),
                 TextSpan(
                   text: "Caracteriza pessoas calmas, estáveis e pacientes. Assim como o dosha Kapha, é marcado por serenidade, constância e apego. "
                       "Costumam ser observadores, empáticos e confiáveis.\n\n"
@@ -151,8 +166,11 @@ class AboutTemplate extends StatelessWidget {
                 color: TemperamentColors.darkTextColor,
               ),
               children: [
-                const TextSpan(
+                TextSpan(
                   text: "4. Frio e Seco (Melancólico):\n\n",
+                  style: TemperamentTextStyle.tertiary.large.copyWith(
+                    color: TemperamentColors.darkTextColor,
+                  ),
                 ),
                 TextSpan(
                   text:

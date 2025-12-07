@@ -21,7 +21,7 @@ analyzer:
 
 linter:
   rules:
-    prefer_relative_imports: true
+    # prefer_relative_imports: true
     avoid_print: true
     omit_local_variable_types: true
     use_rethrow_when_possible: false

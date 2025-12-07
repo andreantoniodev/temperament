@@ -28,9 +28,9 @@ class QuestionsTemplate extends StatelessWidget {
         ],
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
-          onPressed: () {
+          onPressed: () async {
             controller.resetQuiz(reset: true);
-            go.home(context);
+            await go.home(context);
           },
         ),
       ),
@@ -126,10 +126,10 @@ class QuestionsTemplate extends StatelessWidget {
               onPressed: currentRadioValue.isEmpty
                   ? null
                   : () async {
-                      await controller.next(index).then((result) {
+                      await controller.next(index).then((result) async {
                         controller.resetQuiz(reset: result);
                         if (result && context.mounted) {
-                          go.result(context);
+                          await go.result(context);
                         }
                       });
                     },

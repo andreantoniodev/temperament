@@ -51,7 +51,7 @@ abstract class _QuestionsController with Store {
 
   @action
   void resetQuiz({required bool reset}) {
-    if (reset == false) return;
+    if (!reset) return;
 
     pageController.jumpToPage(0);
     currentRadioValue = '';
@@ -64,7 +64,7 @@ abstract class _QuestionsController with Store {
     try {
       await localStorage.write(KeysStorage.temperament, _combinationResult());
       return true;
-    } catch (e) {
+    } on Exception {
       return false;
     }
   }
